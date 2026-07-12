@@ -1435,3 +1435,52 @@ body.dark-mode .sidebar {
   border-right-color: var(--border-color);
 }
 
+/* ── Mobile Layout Fine-Tuning ── */
+@media (max-width: 576px) {
+  .navbar-search {
+    display: none !important; /* Hide global search on tiny screens to prevent overlap */
+  }
+  .navbar-breadcrumb {
+    font-size: 0.75rem;
+  }
+  .navbar-breadcrumb a, 
+  .navbar-breadcrumb .separator {
+    display: none !important; /* Hide parent crumbs to fit title */
+  }
+  .app-content {
+    padding: 12px;
+  }
+  .page-header-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .page-header-actions .btn {
+    width: 100%;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 16px;
+  }
+  .stat-card-value {
+    font-size: 1.5rem;
+  }
+  .card-body {
+    padding: 16px;
+  }
+  .table-filters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .filter-select {
+    width: 100%;
+  }
+}
+
+
