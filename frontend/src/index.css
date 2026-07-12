@@ -147,6 +147,7 @@ input, select, textarea { font-family: inherit; }
 
 .app-main {
   flex: 1;
+  min-width: 0;
   margin-left: var(--sidebar-width);
   display: flex;
   flex-direction: column;
@@ -160,6 +161,7 @@ input, select, textarea { font-family: inherit; }
 
 .app-content {
   flex: 1;
+  min-width: 0;
   padding: 32px;
   max-width: 1440px;
 }
@@ -629,6 +631,7 @@ input, select, textarea { font-family: inherit; }
 
 /* ── Data Table ── */
 .table-container {
+  width: 100%;
   overflow-x: auto;
 }
 
@@ -674,6 +677,7 @@ input, select, textarea { font-family: inherit; }
   border-bottom: 1px solid var(--border-color-light);
   color: var(--color-text-primary);
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 .data-table tbody tr {
@@ -781,6 +785,7 @@ input, select, textarea { font-family: inherit; }
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.4;
+  white-space: nowrap;
 }
 
 .status-badge .dot {
