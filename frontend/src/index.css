@@ -1507,6 +1507,18 @@ body.dark-mode .login-form-container input {
   padding: 8px 0;
 }
 
+body.dark-mode .btn-secondary {
+  background: var(--color-surface-raised) !important;
+  color: var(--color-text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: var(--border-color-light) !important;
+  border-color: var(--color-text-secondary) !important;
+}
+
+
 
 
 
