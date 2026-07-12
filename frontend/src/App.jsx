@@ -52,7 +52,7 @@ export default function App() {
       {/* Conditionally show sidebar and top navbar */}
       {!isLoginPage && <Sidebar />}
 
-      <main className={`app-main ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
+      <main className={isLoginPage ? 'app-main-login' : `app-main ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
         {!isLoginPage && <Navbar />}
         
         <div className={isLoginPage ? '' : 'app-content'}>

@@ -1483,4 +1483,24 @@ body.dark-mode .sidebar {
   }
 }
 
+.app-main-login {
+  flex: 1;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.dark-mode .login-right {
+  background: #181920 !important;
+  color: white !important;
+}
+
+body.dark-mode .login-form-container input {
+  background: #252834 !important;
+  border-color: #2F3242 !important;
+  color: white !important;
+}
+
+
 
