@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_transit_vehicle_tree" model="ir.ui.view">
+        <field name="name">transit.vehicle.tree</field>
+        <field name="model">transit.vehicle</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="license_plate"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_transit_vehicle" model="ir.actions.act_window">
+        <field name="name">Vehicles</field>
+        <field name="res_model">transit.vehicle</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_transit_root" name="TransitOps" sequence="10"/>
+    <menuitem id="menu_transit_vehicle" name="Vehicles" parent="menu_transit_root" action="action_transit_vehicle" sequence="10"/>
+</odoo>
