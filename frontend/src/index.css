@@ -1502,5 +1502,11 @@ body.dark-mode .login-form-container input {
   color: white !important;
 }
 
+.collapsed .sidebar-user {
+  justify-content: center;
+  padding: 8px 0;
+}
+
+
 
 
