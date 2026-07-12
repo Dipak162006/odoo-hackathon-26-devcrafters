@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import {
   LayoutDashboard, Truck, Users, MapPin, Wrench, Fuel,
@@ -49,6 +49,12 @@ const NAV_SECTIONS = [
 export default function Sidebar() {
   const { user, sidebarCollapsed, sidebarMobileOpen, toggleSidebar, toggleMobileSidebar, unreadCount } = useApp();
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('transitops_user');
+    navigate('/login');
+  };
 
   const classes = [
     'sidebar',
@@ -127,6 +133,14 @@ export default function Sidebar() {
               <span className="role">{user.role}</span>
             </div>
           </div>
+          <button
+            className="sidebar-link"
+            onClick={handleLogout}
+            style={{ marginTop: 4, color: '#EF4444' }}
+          >
+            <LogOut size={18} />
+            <span>{sidebarCollapsed ? '' : 'Logout'}</span>
+          </button>
           <button
             className="sidebar-link"
             onClick={toggleSidebar}
